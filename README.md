@@ -28,7 +28,7 @@ National Survey on Drug Use and Health (samhsa.gov)
 ### Visuals: 
 Bar graph of Drug Overdose death vs year (refer to data set 1)
 Bar graph of the percentage of drug overdose death in terms of overall death vs year (refer to data set 1)
-Bar graph of the multiple drugs' death vs year (refer to data set 1)
+Bar graph of the multiple drugs' death vs year (refer to data set 2)
 Percentage of different gender of drug poisoning death (refer to data set 2)
 Percentage of drug poisoning death in terms of overall drug poisoning death by age group (refer to data set 2)
 
