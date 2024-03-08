@@ -59,6 +59,7 @@ ax.grid(visible=True,
         axis='both',
         alpha=.4)
 
+# Formatting X-Axis
 ax.set_xlabel('Year',
               labelpad=10.0,
               size=24)
@@ -69,6 +70,7 @@ ax.set_xticklabels(years[::2]+[2021],
 ax.set_xlim(left=min(years),
             right=max(years))
 
+# Formatting Y-Axis
 ax.set_ylabel('Number of Deaths',
            labelpad=20,
            size=24)
@@ -80,6 +82,7 @@ ax.set_yticklabels(labels=y_labels,
 ax.set_ylim(bottom=0,
             top=grp['All drugs'][2021])
 
+# Plotting lines for each drug
 for drug in drugs:
    if drug == 'Any Opioid':
       continue
