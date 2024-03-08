@@ -17,7 +17,6 @@ def get(print_out= False):
     :Returns: pd.Series, pd.Series
     '''
     df = data_frame.get(print_out)
-
     conditions = ((df['Intent'] == 'All (preventable, intentional, undetermined)')
                 & (df['Gender'] != 'Both sexes'))
     grp = df[conditions].groupby(['Gender','Year','DrugType'])['AllAges'].sum()
