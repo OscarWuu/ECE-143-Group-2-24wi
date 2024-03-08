@@ -1,5 +1,12 @@
 # ECE-143-Group-2-24wi
-
+## Using our Repo
+There are two main folders, 'Final_product' contains all the final files and 'Scrapped' contains every other file that 
+was not longer necessary by the end of the project
+The python notebook 'visuals' will be where all the graphs can be found
+Some third party modules used are:
+Pandas (2.2.0)
+Matplotlib (3.8.3)
+Numpy (1.26.4)
 ## ECE 143 Project Proposal
 Xiangwei Huang, Oscar Wu, Yuxiang Chen, Andrew Lara, Dingye Chen
 
