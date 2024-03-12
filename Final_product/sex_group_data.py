@@ -18,6 +18,6 @@ def get(datatable):
     conditions = ((df['Intent'] == 'All (preventable, intentional, undetermined)')
                 & (df['Gender'] != 'Both sexes')
                 & (df['DrugType'] != 'All drugs'))
-    grp = df[conditions].groupby(['Gender','DrugType','Year'])['AllAges'].sum()
+    grp = df[conditions].groupby(['Gender','DrugType'])['AllAges'].sum()
     return grp['Male'], grp['Female']
 
