@@ -1,17 +1,14 @@
 import pandas as pd
 
 # read csv files
-def get(print_out = False) -> pd.DataFrame:
+def get() -> pd.DataFrame:
     '''
-        Give a pandas dataframe created from the
-        Datasets/Drug_Poisoning_deaths_and_rates.csv path,
-        also printsout table and all columns for reference of use.
+    Give a pandas dataframe created from the
+    Datasets/Drug_Poisoning_deaths_and_rates.csv
+    path, also can print out table and all columns
+    for reference of use.
     
-        :Param: 
-        :print_out: wether or not to print out dataset information
-        :type: bool
-        
-        :Returns: Pandas Data Frame
+    :Returns: Pandas Data Frame
     '''
     file_path = r'Drug_Poisoning_deaths_and_rates.csv'
     df = pd.read_csv(file_path, 
@@ -36,8 +33,5 @@ def get(print_out = False) -> pd.DataFrame:
                 '85+year', 
                 'NotStated', 
                 'AllAges']
-    if print_out:
-        print('================ Table ================\n',df)
-        print('\n================ Columns ================\n',df.columns)
     assert isinstance(df, pd.DataFrame)
     return df

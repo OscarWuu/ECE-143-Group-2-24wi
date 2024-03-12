@@ -1,9 +1,6 @@
 import pandas as pd
-import data_frame
-import importlib
-importlib.reload(data_frame)
 
-def get(print_out= False):
+def get(datatable):
     '''
     Gives ints of:
     Number of Male deaths by drugs,
@@ -11,15 +8,16 @@ def get(print_out= False):
     Number of total deaths by drugs
 
     :Param: 
-    :print_out: wether or not print out dataset values
-    :type: bool
+    :datatable: data table on which to perform filterign
+    :type: Pandas Data Frame
 
     :Returns: pd.Series, pd.Series
     '''
-    df = data_frame.get(print_out)
+    assert isinstance(datatable, pd.DataFrame)
+    df = datatable
     conditions = ((df['Intent'] == 'All (preventable, intentional, undetermined)')
-                & (df['Gender'] != 'Both sexes'))
-    grp = df[conditions].groupby(['Gender','Year','DrugType'])['AllAges'].sum()
-    if print_out: print(grp)
+                & (df['Gender'] != 'Both sexes')
+                & (df['DrugType'] == 'All drugs'))
+    grp = df[conditions].groupby(['Gender'])['AllAges'].sum()
     return grp['Male'], grp['Female']
 
