@@ -5,7 +5,6 @@ def get(datatable):
     Gives ints of:
     Number of Male deaths by drugs,
     Number of Female deaths by drugs,
-    Number of total deaths by drugs
 
     :Param: 
     :datatable: data table on which to perform filterign
